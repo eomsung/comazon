@@ -1,0 +1,92 @@
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/73cb9639-d8b7-4f11-9a62-53f4187f3f11/saved-prodcuts
+
+###
+Post http://localhost:3000/users/8ab5ebee-45d5-4795-8e14-c10c42e283fd/saved-products
+Content-Type: application/json
+
+{
+  "productId": "0d8e554a-84c0-4b9c-bdc3-d04b9bbf1344"
+}
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "yjkism@example.com", 
+  "firstName": "유진s",
+  "lastName": "김",
+  "address": "충청북도 청주시 북문로 210번길 5"
+}
+
+###
+
+PATCH http://localhost:3000/users/b8f11e76-0a9e-4b3f-bccf-8d9b4fbf331e
+Content-Type: application/json
+
+{
+  "address": "서울특별시 강남구 무실로 234번길 45-6"
+}
+
+###
+
+DELETE http://localhost:3000/users/d9c39293-dae4-44bc-9e3c-b3d5a5d61817
+
+
+
+
+###
+GET http://localhost:3000/products
+###
+GET http://localhost:3000/products/0d8e554a-84c0-4b9c-bdc3-d04b9bbf1344
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "유진asdsdad",
+  "category": "SPORTS",
+  "price": 1234,
+  "stock":1
+}
+
+###
+
+PATCH http://localhost:3000/products/0d8e554a-84c0-4b9c-bdc3-d04b9bbf1344
+Content-Type: application/json
+
+{
+  "name": "서울특별시 강남구 무실로 234번길 45-6"
+}
+
+###
+DELETE http://localhost:3000/products/d710e715-a50e-453c-a4e4-0502c2048acd
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "yjkasdim@example.com",
+  "firstName": "유진",
+  "lastName": "김",
+  "address":"충청북도 청주시 북문로 210번길",
+  "userPreference":{
+    "receiveEmail":false
+  }
+}
+###
+PATCH http://localhost:3000/users/8ab5ebee-45d5-4795-8e14-c10c42e283fd
+Content-Type: application/json
+
+{
+  "address":"양양",
+  "userPreference":{
+    "receiveEmail":false
+  }
+}
